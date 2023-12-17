@@ -10,7 +10,6 @@ namespace ServerTest
         [TestMethod]
         public void TestMessageMethod()
         {
-            // Arrange
             var messageSource = new Mock<IMessageSource>();
             var server = new Server(messageSource.Object);
             server.Clients.Add("User1", new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1234));
